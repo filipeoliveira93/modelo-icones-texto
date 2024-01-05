@@ -1,0 +1,109 @@
+<style type="text/css">
+    html {
+        scroll-behavior: smooth;
+    }
+
+    #texto-seo {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+
+    .texto-seo2 {
+        padding: 0 0px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.8s ease-out;
+    }
+
+    .texto-seo2 p {
+        margin-bottom: 25px;
+    }
+
+    .container-seo {
+        width: 50%;
+
+        margin: 2px;
+
+    }
+
+    .accordion {
+        display: inline;
+        font-size: 0.8rem;
+        margin-top: 10px;
+        pointer-events: painted;
+        cursor: pointer;
+        transition: 0.2s;
+
+    }
+
+    .end-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icone-seo {
+        height: 100px;
+        width: 100px;
+        border: 1px solid;
+    }
+
+    .icones {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2px;
+        justify-content: center;
+    }
+
+    @media (max-width: 600px) {
+        #texto-seo {
+            flex-direction: column-reverse;
+        }
+
+        .container-seo {
+            width: 100%;
+
+        }
+    }
+</style>
+<div id="texto-seo">
+    <div class="container-seo">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, incidunt aperiam nemo eveniet qui quo at esse
+            unde natus, pariatur sed mollitia, voluptas illum quasi quia est perspiciatis assumenda necessitatibus.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, incidunt aperiam nemo eveniet qui quo at esse
+            unde natus, pariatur sed mollitia, voluptas illum quasi quia est perspiciatis assumenda necessitatibus.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, incidunt aperiam nemo eveniet qui quo at esse
+            unde natus, pariatur sed mollitia, voluptas illum quasi quia est perspiciatis assumenda necessitatibus.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, incidunt aperiam nemo eveniet qui quo at esse
+            unde natus, pariatur sed mollitia, voluptas illum quasi quia est perspiciatis assumenda necessitatibus.</p>
+    </div>
+
+    <div class="container-seo icones">
+        <span class="icone-seo"></span>
+        <span class="icone-seo"></span>
+        <span class="icone-seo"></span>
+        <span class="icone-seo"></span>
+    </div>
+</div>
+
+<div class="texto-seo2">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, incidunt aperiam nemo eveniet qui quo at esse
+        unde natus, pariatur sed mollitia, voluptas illum quasi quia est perspiciatis assumenda necessitatibus.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, incidunt aperiam nemo eveniet qui quo at esse
+        unde natus, pariatur sed mollitia, voluptas illum quasi quia est perspiciatis assumenda necessitatibus.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, incidunt aperiam nemo eveniet qui quo at esse
+        unde natus, pariatur sed mollitia, voluptas illum quasi quia est perspiciatis assumenda necessitatibus.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, incidunt aperiam nemo eveniet qui quo at esse
+        unde natus, pariatur sed mollitia, voluptas illum quasi quia est perspiciatis assumenda necessitatibus.</p>
+</div>
+
+<div class="end-text">
+    <button class="accordion btn btn-primary">Continuar lendo</button>
+</div>
+</div>
+
+<script>var btn = document.querySelector(".accordion"); btn.addEventListener("click", function () { var panel = document.querySelector(".texto-seo2"); if (panel.style.maxHeight) { panel.style.maxHeight = null; setTimeout(function () { document.querySelector('button.accordion').innerText = "Continuar lendo" }, 500); } else { panel.style.maxHeight = panel.scrollHeight + "px"; setTimeout(function () { document.querySelector('button.accordion').innerText = "Ver Menos" }, 500); } }); </script>
